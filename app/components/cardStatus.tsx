@@ -4,7 +4,7 @@ import React from "react";
 
 const CardStatus = () => {
   return (
-    <section className="p-6 mt-16"> {/* Añadí mt-16 para dar espacio al navbar */}
+    <section className=""> {/* Añadí mt-16 para dar espacio al navbar */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Tarjeta 1 */}
         <article className="w-full h-32 bg-white rounded-xl shadow-sm border-gray-200 relative">
