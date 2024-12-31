@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import SliderBar from "./SliderBar"; 
 import Navbar from "./NavBar";
+
 const Layout: React.FC = () => {
   const [isSliderOpen, setSliderOpen] = useState(true);
   const [isCommentSliderOpen, setCommentSliderOpen] = useState(true);
