@@ -86,7 +86,8 @@ const SliderBar: React.FC<SliderBarProps> = () => {
         </nav>
       </aside>
 
-      <div className="flex-1 bg-gray-100 p-6">
+      <div className="flex-1 bg-gray-100 p-6 overflow-y-auto">
+        {/* Aquí el contenido tendrá scroll si es necesario */}
         <CardStatus />
       </div>
     </div>

@@ -15,7 +15,7 @@ const Layout: React.FC = () => {
 
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col overflow-hidden">
       <Navbar/>
       <SliderBar
         isOpen={isSliderOpen}
