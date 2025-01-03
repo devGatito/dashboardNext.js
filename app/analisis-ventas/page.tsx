@@ -151,13 +151,73 @@ const AnalisisComponent = () => {
       </div>
       {/*Top Productos & ventas de region */}
 
-   
-  
-  
-  
-   
-  
-  
+      <div className="w-full   mx-auto  rounded-lg shadow-sm border border-gray-200 p-6 grid gap-6 md:grid-cols-2">
+        {/* Contenedor 1 */}
+        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+          <div className="mb-4">
+            <h2 className="text-black text-lg font-semibold">Top Productos</h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              { name: "Producto A", sales: "234 ventas", price: "$12,450" },
+              { name: "Producto B", sales: "185 ventas", price: "$9,872" },
+              { name: "Producto C", sales: "142 ventas", price: "$7,234" },
+            ].map((product, index) => (
+              <div
+                key={index}
+                className="flex justify-between items-center border-b pb-2"
+              >
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gray-100 rounded border mr-4"></div>
+                  <div>
+                    <p className="text-black text-base font-medium">
+                      {product.name}
+                    </p>
+                    <p className="text-gray-600 text-sm">{product.sales}</p>
+                  </div>
+                </div>
+                <p className="text-black text-base font-medium">
+                  {product.price}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Contenedor 2 */}
+        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+          <div className="mb-4">
+            <h2 className="text-black text-lg font-semibold">
+              Ventas por Región
+            </h2>
+          </div>
+          <div className="space-y-6">
+            {[
+              { region: "Norte", value: "$45,230", width: "w-8/12" },
+              { region: "Sur", value: "$32,180", width: "w-5/12" },
+              { region: "Este", value: "$28,940", width: "w-4/12" },
+            ].map((data, index) => (
+              <div key={index} className="flex items-center justify-between">
+                <div className="flex flex-col w-full">
+                  <div className="flex justify-between">
+                    <p className="text-black text-base font-medium">
+                      {data.region}
+                    </p>
+                    <p className="text-black text-base font-medium">
+                      {data.value}
+                    </p>
+                  </div>
+                  <div className="w-full bg-gray-100 rounded h-4 mt-2">
+                    <div
+                      className={`${data.width} bg-blue-600 h-4 rounded`}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 };

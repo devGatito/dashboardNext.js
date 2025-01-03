@@ -81,16 +81,13 @@ const CardStatus = () => {
         </article>
       </div>
       {/*cards*/}
-      <div className="relative bg-transparent border-gray-200 p-2">
+      <div className="relative bg-transparent border-gray-200 pt-3">
         {/* Contenedor principal con Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
           {/* Tarjeta 1: Tendencia de Ventas */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-            <div className="flex justify-between items-center mb-4">
-              <p className="text-black text-base font-semibold">
-                Tendencia de<br/> Ventas
-              </p>
-              <div className="flex space-x-2">
+            <div className="flex justify-end justify-end items-center mb-4">
+              <div className="flex space-x-2 justify-center items-center">
                 <button className="px-4 py-2 bg-blue-50 rounded text-blue-600 text-sm">
                   Día
                 </button>
@@ -146,7 +143,45 @@ const CardStatus = () => {
           </div>
         </div>
       </div>
+
+      {/* Advertencia */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-3">
+  {Array(4).fill(null).map((_, index) => (
+    <div
+      key={index}
+      className="w-full h-44 bg-white rounded-xl shadow-sm border border-gray-200"
+    >
+      <div className="p-4">
+        {/* Título */}
+        <div className="flex items-center space-x-2">
+          <div className="w-4 h-4 bg-gray-200 rounded-full"></div>
+          <span className="text-yellow-500 text-lg font-semibold">
+            Inventory Alert
+          </span>
+        </div>
+        {/* Contenido */}
+        <div className="mt-4 text-gray-600 text-base">
+          <p>5 products are running low on stock.</p>
+          <p>Review inventory levels.</p>
+        </div>
+        {/* Botón */}
+        <div className="mt-4">
+          <a
+            href="#"
+            className="text-indigo-600 text-sm font-medium hover:underline"
+          >
+            View Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+
     </section>
+
+    
   );
 };
 
