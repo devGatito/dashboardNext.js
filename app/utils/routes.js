@@ -7,6 +7,8 @@ export const routes = [
     { name: "ReportComponent", path: "/report" },
     { name: "ActividadesPage", path: "/activity" },
     { name: "FinanzasPage", path: "/finanzas" },
+    { name: "MarketingPage", path: "/marketing" },
+
     
 
 
